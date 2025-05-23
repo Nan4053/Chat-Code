@@ -13,7 +13,7 @@ export const useSocketContext = () => {
 // In your initSocket function, ensure proper connection handling
 export const initSocket = (userId) => {
 	return new Promise((resolve, reject) => {
-	  const socket = io("http://localhost:5000", {
+	  const socket = io("https://chat-and-code.onrender.com/", {
 		query: { userId: userId }, // Pass username to server
     transports: ["websocket"],
     reconnection: true,
